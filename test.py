@@ -8,3 +8,4 @@ class basicTest(unittest.TestCase):
         self.assertEqual(agent.name, 'default')
         self.assertEqual(agent.elo(0), 0)
         self.assertEqual(agent.elo('bla'), 0)
+        self.assertEqual(agent.elo(range(1000)), 0)
