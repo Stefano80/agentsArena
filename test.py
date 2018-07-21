@@ -7,3 +7,4 @@ class basicTest(unittest.TestCase):
         self.assertIsInstance(agent, agentsArena.Agent)
         self.assertEqual(agent.name, 'default')
         self.assertEqual(agent.elo(0), 0)
+        self.assertEqual(agent.elo('bla'), 0)
