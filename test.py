@@ -6,3 +6,4 @@ class basicTest(unittest.TestCase):
         agent = agentsArena.createAgent()
         self.assertIsInstance(agent, agentsArena.Agent)
         self.assertEqual(agent.name, 'default')
+        self.assertEqual(agent.elo(0), 0)
