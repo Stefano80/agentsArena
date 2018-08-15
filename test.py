@@ -19,4 +19,7 @@ class basicTest(unittest.TestCase):
 
     def test_createMatch(self):
         match = agentsArena.createMatch()
+        match.addAgent(agentsArena.createAgent())
+        match.addAgent(agentsArena.createAgent())
+        self.assertEqual(match.eloDifference(), 0)
         
