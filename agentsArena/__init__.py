@@ -8,7 +8,7 @@ def createMatch():
 class Agent:
     def __init__(self):
         self.name = 'default'
-        self.elo  = lambda x: 0
+        self.bayesElo  = lambda x: 0
 
 class Match:
     def __init__(self):
@@ -18,4 +18,4 @@ class Match:
         self.agents.append(agent)
 
     def eloDifference(self):
-        return self.agents[0].elo(0) - self.agents[1].elo(0)
+        return self.agents[0].bayesElo(0) - self.agents[1].bayesElo(0)

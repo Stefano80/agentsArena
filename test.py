@@ -6,15 +6,15 @@ class basicTest(unittest.TestCase):
         agent = agentsArena.createAgent()
         self.assertIsInstance(agent, agentsArena.Agent)
         self.assertEqual(agent.name, 'default')
-        self.assertEqual(agent.elo(0), 0)
-        self.assertEqual(agent.elo('bla'), 0)
-        self.assertEqual(agent.elo(range(1000)), 0)
+        self.assertEqual(agent.bayesElo(0), 0)
+        self.assertEqual(agent.bayesElo('bla'), 0)
+        self.assertEqual(agent.bayesElo(range(1000)), 0)
 
     def test_modifyAgent(self): 
         agent = agentsArena.createAgent()
-        agent.elo = lambda x: x**2
+        agent.bayesElo = lambda x: x**2
         agent.name = 'new agent'
-        self.assertEqual(agent.elo(2), 4)
+        self.assertEqual(agent.bayesElo(2), 4)
         self.assertEqual(agent.name, 'new agent')
 
     def test_createMatch(self):
